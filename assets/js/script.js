@@ -1,7 +1,7 @@
 const searchBtn = document.getElementById("btn");
 const searchInput = document.getElementById("city");
 const body = document.getElementById("widget");
-const baseUrl = "http://api.openweathermap.org/data/2.5/forecast?";
+const baseUrl = "https://api.openweathermap.org/data/2.5/forecast?";
 const apiKey = "appid=c3957ed1bb4a29e783bef453669d06e8";
 
 searchBtn.addEventListener("click", function (e) {
