@@ -31,3 +31,24 @@ function getWeather(url) {
         console.log(data)
         getLayout(week)}); 
 };
+
+function getLayout(week) {
+
+    week.forEach(function (i) {
+        var card = document.createElement('section')
+        body.appendChild(card);
+        card.classList.add('card');
+        var date = document.createElement('h2')
+        card.appendChild(date);
+        date.textContent = i.dt_txt;
+        var temp = document.createElement('h4')
+        card.appendChild(temp)  
+        temp.textContent = "Temprature: " + i.main.temp + " F";
+        var humidity = document.createElement('h4')
+        card.appendChild(humidity)
+        humidity.textContent = "Humidity: " + i.main.humidity + "%";
+        var wind = document.createElement('h4')
+        card.appendChild(wind)
+        wind.textContent = "Wind Speed:" + i.wind.speed + " MPH";
+    })
+}
